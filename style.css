@@ -1,0 +1,93 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--violet);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+
+  /* colours */
+
+:root {
+    --blue-dark: hsl(233, 47%, 7%);
+    --blue-desat: hsl(244, 38%, 16%);
+    --violet: hsl(277, 64%, 61%);
+    --violet-overlay: hsla(277, 64%, 61%, 0.5);
+    --white: hsl(0, 0%, 100%);
+    --trans-white-p: hsla(0, 0%, 100%, 0.75);
+    --trans-white-h: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+h1 {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: var(--white);
+}
+
+body {
+    font-size: 16px;
+    background-color: var(--blue-dark);
+    color: var(--trans-white-p);
+    font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+main {
+    width: 80vw;
+    height: auto;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content-wrap {
+    background-color: var(--blue-desat);
+    border-radius: 0px 15px 15px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px;
+    padding: 10px;
+    width: 50%;
+}
+
+.header-span {
+    color: var(--violet);
+}
+
+.image-wrap {
+    width: 400px;
+    height: 300px;
+    background: linear-gradient(
+        rgba(170, 92, 219, 0.5),
+        rgba(170, 92, 219, 0.5)
+    ),
+    url(./images/image-header-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
