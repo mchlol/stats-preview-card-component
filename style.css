@@ -35,26 +35,30 @@ body {
     color: var(--trans-white-p);
     font-family: 'Inter', sans-serif;
     font-weight: 400;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    margin: auto;
+    padding: 10%;
 }
 
 
 main {
-    margin: auto;
-    padding-top: 12%;
-    width: 85%;
-    height: auto;
+    /* margin: auto; */
+    /* padding-top: 12%; */
+    /* width: 85%; */
 }
 
 /* content and image */
 
 
 .content-wrap {
+    /* flex: 0 1 auto; */
     background-color: var(--blue-desat);
-    display: flex;
+    display: inline-flex;
     flex-flow: row-reverse nowrap;
     justify-content: space-between;
     align-items: center;
@@ -63,17 +67,17 @@ main {
     border-radius: 15px;
 }
 
-
-
 .image-wrap {
     max-width: 100%;
+    min-height: 100%;
     height: auto;
     margin-right: 0;
+    /* flex: 0 1 auto; */
 }
 
 .image-wrap>img {
+    max-height: 100%;
     max-width: 100%;
-    height: auto;
     filter: brightness(30%) sepia(8) hue-rotate(230deg) saturate(750%) invert(15%);
     object-fit: cover;
     overflow: hidden;
@@ -83,10 +87,11 @@ main {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
-    align-items: center;
-    margin: 25px;
+    align-items: flex-start;
+    flex: 0 1 auto;
+    margin: 25px 0px 25px 25px;
+    padding: 0px 10px;
     gap: 10px;
-    text-align: center;
 }
 
 .left {
@@ -107,12 +112,11 @@ main {
     height: auto;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
     align-items: center;
     line-height: 1.8;
 }
-
 
 .stat {
     margin-right: 25px;
@@ -132,6 +136,10 @@ main {
     color: var(--trans-white-p);
 }
 
+.stat>span:nth-child(3) {
+    text-transform: uppercase;
+}
+
 
 /* footer */
 
@@ -146,8 +154,10 @@ main {
 
 
 @media screen and (max-width: 768px) {
+
     .content-wrap {
         flex-flow: column wrap;
+        text-align: center;
     }
 
     .left {
@@ -156,5 +166,16 @@ main {
     
     .stats-wrap {
         flex-flow: column wrap;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .image-wrap {
+        object-fit: scale-down;
+        height: 100%;
+    }
+
+    .content {
+        flex: 0 1 auto;
     }
 }
